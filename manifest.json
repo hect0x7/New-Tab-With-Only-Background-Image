@@ -1,0 +1,16 @@
+{
+   "chrome_url_overrides": {
+      "newtab": "newtab.html"
+   },
+   "manifest_version": 3,
+   "name": "New Tab With Only Background Image",
+   "description": "纯图片的新标签页",
+   "version": "1.0.0",
+   "action": {
+      "default_popup": "default_popup.html"
+   },
+   "icons": {
+      "48": "img/icon48.png",
+      "128": "img/icon128.png"
+   }
+}

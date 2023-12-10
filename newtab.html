@@ -1,0 +1,56 @@
+<!doctype html>
+<html dir="ltr" lang="zh" class="" lazy-loaded="true">
+
+<head>
+    <meta charset="utf-8">
+    <title>新标签页</title>
+    <style>
+        html,
+        body,
+        #image,
+        #gradient {
+            height: 100%;
+            width: 100%;
+        }
+
+        #image,
+        #gradient {
+            position: fixed;
+            top: 0;
+        }
+
+        body {
+            margin: 0;
+            opacity: 0;
+            transition: opacity 700ms;
+        }
+
+        body[shown] {
+            opacity: 1;
+        }
+
+        #image {
+            background-image: url("./background.jpg");
+            background-position: center center;
+            background-repeat: no-repeat no-repeat;
+            background-size: cover;
+        }
+
+        #gradient {
+            background: radial-gradient(transparent 50%, black),
+                linear-gradient(transparent, black);
+            display: inherit;
+            opacity: .2;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="background_image.js"></script>
+    <!-- The img tag purely exists to capture the load event. -->
+    <img src="./background.jpg" hidden id="bg">
+    <div id="image"></div>
+    <div id="gradient"></div>
+</body>
+
+</html>
